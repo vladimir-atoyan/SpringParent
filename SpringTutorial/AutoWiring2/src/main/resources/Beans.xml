@@ -1,0 +1,39 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <!-- 1) Definition for textEditor bean, no autowiring -->
+<!--    <bean id="textEditor" class="com.tutorialspoint.TextEditor">-->
+<!--        <property name="spellChecker" ref="spellChecker"/>-->
+<!--        <property name="name" value="Generic Text Editor"/>-->
+<!--    </bean>-->
+
+    <!-- 2) Definition for textEditor bean using the autowire 'byName' feature -->
+    <bean id = "textEditor" class = "com.tutorialspoint.TextEditor" autowire = "byName">
+        <property name = "name" value = "Generic Text Editor" />
+    </bean>
+
+    <!-- Definition for spellChecker bean -->
+    <bean id="spellChecker" class="com.tutorialspoint.SpellChecker"></bean>
+
+
+    <!-- 3) Definition for textEditor bean using the autowire 'byType' feature -->
+    <bean id = "textEditor1" class = "com.tutorialspoint.TextEditor1" autowire = "byType">
+        <property name = "name" value = "Generic Text Editor" />
+    </bean>
+
+    <!-- Definition for spellChecker bean -->
+    <bean id = "SpellChecker1" class = "com.tutorialspoint.SpellChecker1"></bean>
+
+
+    <!-- 4) Definition for textEditor bean using the autowire 'Constructor' feature -->
+    <bean id = "textEditor2" class = "com.tutorialspoint.TextEditor2" autowire = "constructor">
+        <constructor-arg value = "Generic Text Editor"/>
+    </bean>
+
+    <!-- Definition for spellChecker bean -->
+    <bean id = "SpellChecker2" class = "com.tutorialspoint.SpellChecker2"></bean>
+
+</beans>

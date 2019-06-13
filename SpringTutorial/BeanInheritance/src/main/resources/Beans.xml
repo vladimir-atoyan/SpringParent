@@ -1,0 +1,37 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="helloWorld" class="com.tutorialspoint.HelloWorld">
+        <property name="message1" value="Hello World!"/>
+        <property name="message2" value="Hello Second World!"/>
+    </bean>
+
+    <bean id="helloIndia" class="com.tutorialspoint.HelloIndia" parent="helloWorld">
+        <property name="message1" value="Hello India!"/>
+        <property name="message3" value="Namaste India!"/>
+    </bean>
+
+    <!--Bean Definition Template
+    You can create a Bean definition template, which can be used by other child bean definitions without putting much effort.
+    While defining a Bean Definition Template, you should not specify the class attribute and should specify abstract
+    attribute and should specify the abstract attribute with a value of true as shown in the following code snippet −
+    The parent bean cannot be instantiated on its own because it is incomplete, and it is also explicitly marked as abstract.
+    When a definition is abstract like this, it is usable only as a pure template bean definition that serves as a parent
+    definition for child definitions.
+    -->
+    <bean id = "beanTeamplate" abstract = "true">
+        <property name = "message1" value = "Hello World!"/>
+        <property name = "message2" value = "Hello Second World!"/>
+        <property name = "message3" value = "Namaste India!"/>
+    </bean>
+
+    <bean id = "helloIndia1" class = "com.tutorialspoint.HelloIndia" parent = "beanTeamplate">
+        <property name = "message1" value = "Hello India!"/>
+        <property name = "message3" value = "Namaste India!"/>
+    </bean>
+
+</beans>

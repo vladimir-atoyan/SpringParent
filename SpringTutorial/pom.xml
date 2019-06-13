@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.tutorialspoint</groupId>
+    <artifactId>SpringTutorial</artifactId>
+    <version>1.0</version>
+    <packaging>pom</packaging>
+	
+    <parent>
+        <groupId>com.tutorial</groupId>
+        <artifactId>SprintParent</artifactId>
+        <version>1.0</version>
+    </parent>
+
+    <modules>
+        <module>HelloSpring</module>
+        <module>HelloSpring1</module>
+        <module>BeanScopes</module>
+        <module>BeanLifeCycle</module>
+        <module>BeanInheritance</module>
+        <module>DependencyInjection</module>
+        <module>InjectingInnerBeans</module>
+        <module>InjectingCollection</module>
+        <module>AutoWiring2</module>
+        <module>AnnotationConfiguration</module>
+        <module>JavaConfiguration</module>
+        <module>EventHandling</module>
+        <module>CustomEvents</module>
+        <module>Aspect</module>
+        <module>AspectJ</module>
+        <module>JDBCExample</module>
+        <module>StoredProcedure</module>
+        <module>ProgrammaticTransaction</module>
+        <module>MVCHelloWorld</module>
+    </modules>
+
+    <properties>
+        <!--<spring.version>4.1.6.RELEASE</spring.version>-->
+        <spring.version>4.3.18.RELEASE</spring.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+    </dependencies>
+
+</project>

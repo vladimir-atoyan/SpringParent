@@ -1,0 +1,89 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+    <context:annotation-config/>
+
+    <!-- 0) Definition for student bean -->
+    <bean id="student" class="com.tutorialspoint.com.tutorialspoint.Student">
+        <property name="name" value="Zara"/>
+
+        <!-- try without passing age and check the result. It will throw exception. -->
+        <property name="age" value="11"/>
+    </bean>
+
+
+    <!-- 1) Definition for textEditor bean without constructor-arg. @Autowired on Setter Methods  -->
+    <bean id = "textEditor" class = "com.tutorialspoint.TextEditor">
+    </bean>
+
+    <!-- Definition for spellChecker bean -->
+    <bean id = "spellChecker" class = "com.tutorialspoint.SpellChecker">
+    </bean>
+
+
+    <!-- 2) Definition for textEditor bean. @Autowired on Properties -->
+    <bean id = "textEditor1" class = "com.tutorialspoint.TextEditor1">
+    </bean>
+
+    <!-- Definition for spellChecker bean -->
+    <bean id = "spellChecker1" class = "com.tutorialspoint.SpellChecker1">
+    </bean>
+
+
+    <!-- 3) Definition for textEditor bean without constructor-arg. @Autowired on Constructors  -->
+    <bean id = "textEditor2" class = "com.tutorialspoint.TextEditor2">
+    </bean>
+
+    <!-- Definition for spellChecker bean -->
+    <bean id = "spellChecker2" class = "com.tutorialspoint.SpellChecker2">
+    </bean>
+
+
+    <!-- 4) Definition for student bean. @Autowired with (required = false) option -->
+    <bean id="student1" class="com.tutorialspoint.Student1">
+        <property name="name" value="Zara"/>
+
+        <!-- try without passing age and check the result. It will work. -->
+        <!--<property name="age" value="11"/>-->
+    </bean>
+
+
+    <!-- 5) Definition for profile bean. @Qualifier Annotation -->
+    <bean id = "profile2" class = "com.tutorialspoint.Profile2"></bean>
+
+    <!-- Definition for student2_1 bean -->
+    <bean id = "student2_1" class = "com.tutorialspoint.Student2">
+        <property name = "name" value = "Zara" />
+        <property name = "age" value = "11"/>
+    </bean>
+
+    <!-- Definition for student2_2 bean -->
+    <bean id = "student2_2" class = "com.tutorialspoint.Student2">
+        <property name = "name" value = "Nuha" />
+        <property name = "age" value = "2"/>
+    </bean>
+
+
+    <!-- 6) Definition for HelloWorld bean. @PostConstruct and @PreDestroy Annotations -->
+    <bean id = "helloWorld" class = "com.tutorialspoint.HelloWorld"
+          init-method = "init" destroy-method = "destroy">
+        <property name = "message" value = "Hello World!"/>
+    </bean>
+
+
+    <!-- 7) Definition for textEditor bean. @Resource Annotation, the same as in Java EE 5. -->
+    <bean id = "textEditor3" class = "com.tutorialspoint.TextEditor3">
+    </bean>
+
+    <!-- Definition for spellChecker bean -->
+    <bean id = "spellChecker3" class = "com.tutorialspoint.SpellChecker3">
+    </bean>
+
+</beans>
