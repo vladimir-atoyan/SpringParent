@@ -17,6 +17,7 @@
     <modules>
         <module>HelloStruts2</module>
         <module>StrutsInterceptors</module>
+        <module>ValueStack</module>
     </modules>
 
     <properties>

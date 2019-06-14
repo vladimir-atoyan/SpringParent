@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset = UTF-8" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 
 <html>
@@ -8,8 +8,8 @@
 
 <body>
 <h1>Hello World From Struts2</h1>
-<form action = "hello" id="name">
-    <label for = "name">Please enter your name</label><br/>
+<form action = "hello">
+    <label for = "name" id="name">Please enter your name</label><br/>
     <input type = "text" name = "name"/>
     <input type = "submit" value = "Say Hello"/>
 </form>
