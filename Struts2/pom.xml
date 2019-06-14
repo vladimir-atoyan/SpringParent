@@ -16,6 +16,7 @@
 
     <modules>
         <module>HelloStruts2</module>
+        <module>StrutsInterceptors</module>
     </modules>
 
     <properties>
