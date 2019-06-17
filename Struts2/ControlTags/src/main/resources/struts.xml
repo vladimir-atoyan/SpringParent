@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <constant name="struts.devMode" value="true"/>
+
+    <package name="helloworld" extends="struts-default">
+
+        <action name="hello" class="com.tutorialspoint.struts2.IfTagAction" method="execute">
+            <result name="success">/IfTagHelloWorld.jsp</result>
+        </action>
+
+        <action name="employee" class="com.tutorialspoint.struts2.Employee" method="execute">
+            <result name="success">/employee.jsp</result>
+        </action>
+
+        <action name="employee1" class="com.tutorialspoint.struts2.Employee1" method="execute">
+            <result name="success">/employee1.jsp</result>
+        </action>
+
+        <action name="employee2" class="com.tutorialspoint.struts2.Employee2" method="execute">
+            <result name="success">/employee2.jsp</result>
+        </action>
+
+        <action name="generator" class="com.tutorialspoint.struts2.HelloWorldAction" method="execute">
+            <result name="success">/generator.jsp</result>
+        </action>
+
+    </package>
+</struts>

@@ -7,6 +7,10 @@
 
     <package name="helloworld" extends="struts-default">
 
+        <global-exception-mappings>
+            <exception-mapping exception = "java.lang.NullPointerException" result = "error" />
+        </global-exception-mappings>
+
         <action name="hello" class="com.tutorialspoint.struts2.HelloWorldAction" method="execute">
             <result name="success">/HelloWorld.jsp</result>
         </action>
@@ -14,6 +18,13 @@
         <action name="hello2" class="com.tutorialspoint.struts2.HelloWorld2Action" method="execute">
             <result name = "success">/HelloWorld.jsp</result>
             <result name = "error">/AccessDenied.jsp</result>
+        </action>
+
+        <action name="hello3" class="com.tutorialspoint.struts2.HelloWorld3Action" method="execute">
+            <!--The next is working just for this action. The same could be handled globally.-->
+            <!--<exception-mapping exception = "java.lang.NullPointerException" result = "error" />-->
+            <result name = "success">/HelloWorld.jsp</result>
+            <result name = "error">/error.jsp</result>
         </action>
 
     </package>
