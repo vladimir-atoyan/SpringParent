@@ -7,6 +7,8 @@
 </head>
 
 <body>
-xxx
+<s:action name="hello" executeResult="true">
+    Output from Hello:  <br />
+</s:action>
 </body>
 </html>
