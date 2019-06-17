@@ -16,13 +16,13 @@
 
     <modules>
         <module>HelloStruts2</module>
-        <module>StrutsInterceptors</module>
+        <!--<module>StrutsInterceptors</module>
         <module>ValueStack</module>
         <module>FileUploads</module>
         <module>DatabaseAccess</module>
         <module>SendingEmail</module>
         <module>Validations</module>
-        <module>Localization</module>
+        <module>Localization</module>-->
     </modules>
 
     <properties>
