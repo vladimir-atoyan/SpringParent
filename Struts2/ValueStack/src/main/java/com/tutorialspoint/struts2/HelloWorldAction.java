@@ -9,7 +9,8 @@ import com.opensymphony.xwork2.ActionSupport;
 public class HelloWorldAction extends ActionSupport {
     private String name;
 
-    public HelloWorldAction() {}
+    public HelloWorldAction() {
+    }
 
     public String execute() throws Exception {
         ValueStack stack = ActionContext.getContext().getValueStack();
