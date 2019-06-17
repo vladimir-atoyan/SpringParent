@@ -10,5 +10,16 @@
 <s:action name="hello" executeResult="true">
     Output from Hello:  <br />
 </s:action>
+
+<br /> <br /> <br />
+
+<s:action name="hello" executeResult="false">
+    Output 2 from Hello:  <br />
+</s:action>
+
+<s:iterator value="#attr.names">
+    <s:property /><br />
+</s:iterator>
+
 </body>
 </html>
