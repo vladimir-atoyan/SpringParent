@@ -15,14 +15,18 @@
     </parent>
 
     <modules>
-        <module>HelloStruts2</module>
-        <!--<module>StrutsInterceptors</module>
-        <module>ValueStack</module>
-        <module>FileUploads</module>
+        <module>Annotations</module>
+        <module>ControlTags</module>
         <module>DatabaseAccess</module>
+        <module>DataTags</module>
+        <module>FileUploads</module>
+        <module>HelloStruts2</module>
+        <module>Localization</module>
         <module>SendingEmail</module>
+        <module>StrutsInterceptors</module>
+        <module>TypeConversion</module>
         <module>Validations</module>
-        <module>Localization</module>-->
+        <module>ValueStack</module>
     </modules>
 
     <properties>
