@@ -18,7 +18,7 @@
 
         <!--The Include Tag-->
         <action name="hello1" class="com.tutorialspoint.struts2.HelloWorldAction1" method="execute">
-            <result name = "success">/HelloWorld.jsp</result>
+            <result name="success">/HelloWorld.jsp</result>
         </action>
 
         <action name="employee1" class="com.tutorialspoint.struts2.Employee" method="execute">
@@ -28,21 +28,31 @@
         <!--The Bean Tag-->
 
         <action name="hello2" class="com.tutorialspoint.struts2.HelloWorldAction2" method="execute">
-            <result name = "success">/HelloWorld2.jsp</result>
+            <result name="success">/HelloWorld2.jsp</result>
         </action>
 
         <action name="employee2" class="com.tutorialspoint.struts2.Employee" method="execute">
-            <result name = "success">/employee2.jsp</result>
+            <result name="success">/employee2.jsp</result>
         </action>
 
         <!--The Date Tag-->
         <action name="hello3" class="com.tutorialspoint.struts2.HelloWorldAction3" method="execute">
-            <result name = "success">/HelloWorld3.jsp</result>
+            <result name="success">/HelloWorld3.jsp</result>
         </action>
 
         <!--The Property Tag-->
         <action name="system" class="com.tutorialspoint.struts2.SystemDetails" method="execute">
-            <result name = "success">/System.jsp</result>
+            <result name="success">/System.jsp</result>
+        </action>
+
+        <!--The Text Tag-->
+        <action name="hello4" class="com.tutorialspoint.struts2.HelloWorldAction4" method="execute">
+            <result name="success">/HelloWorld4.jsp</result>
+        </action>
+
+        <!--The URL Tag-->
+        <action name="hello5" class="com.tutorialspoint.struts2.HelloWorldAction5" method="execute">
+            <result name="success">/HelloWorld5.jsp</result>
         </action>
 
     </package>

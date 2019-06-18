@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <constant name="struts.devMode" value="true"/>
+
+    <package name="default" extends="struts-default">
+
+        <result-types>
+            <result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult"/>
+        </result-types>
+
+        <action name="*Menu" method="{1}" class="com.tutorialspoint.struts2.MenuAction">
+            <result name="tiger" type="tiles">tiger</result>
+            <result name="lion" type="tiles">lion</result>
+        </action>
+
+    </package>
+
+</struts>
