@@ -16,9 +16,9 @@
     <modules>
         <!--<module>SpringTutorial</module>
         <module>HelloJsp</module>
-        <module>MyBatisFinalExamples</module>
         <module>SpringTests</module>
 -->
+        <module>MyBatisFinalExamples</module>
         <module>Struts2</module>
     </modules>
 
