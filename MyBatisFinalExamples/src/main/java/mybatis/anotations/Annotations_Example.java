@@ -85,7 +85,7 @@ public class Annotations_Example {
         session.close();
     }
 
-    public static void delete() throws IOException{
+    public static void delete() throws IOException {
 
         Reader reader = Resources.getResourceAsReader("SqlMapConfig.xml");
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(reader);
