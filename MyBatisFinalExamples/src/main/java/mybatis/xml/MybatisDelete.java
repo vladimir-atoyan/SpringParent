@@ -17,7 +17,7 @@ public class MybatisDelete {
         SqlSession session = sqlSessionFactory.openSession();
 
         //Delete operation
-        session.delete("mybatis.xml.Student.deleteById", 2);
+        session.delete("mybatis.xml.Student.deleteById", 1);
         session.commit();
         session.close();
         System.out.println("Record deleted successfully");
