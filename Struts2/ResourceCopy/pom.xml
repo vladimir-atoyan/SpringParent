@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.tutorialspoint</groupId>
+    <artifactId>ResourceCopy</artifactId>
+    <version>1.0</version>
+    <packaging>pom</packaging>
+
+    <parent>
+        <groupId>com.tutorialspoint</groupId>
+        <artifactId>Struts2</artifactId>
+        <version>1.0</version>
+    </parent>
+
+    <modules>
+        <module>HelloWeb</module>
+    </modules>
+
+    <properties>
+        <project.build.encoding>UTF-8</project.build.encoding>
+        <maven-resources-plugin.version>3.1.0</maven-resources-plugin.version>
+        <bank.name>demo</bank.name>
+    </properties>
+
+    <profiles>
+        <profile>
+            <id>ibt-development</id>
+            <properties>
+                <bank.name>ibt</bank.name>
+                <environment>ibt.development</environment>
+            </properties>
+        </profile>
+        <profile>
+            <id>cbt-development</id>
+            <properties>
+                <bank.name>cbt</bank.name>
+                <environment>cbt.development</environment>
+            </properties>
+        </profile>
+    </profiles>
+
+<!--
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>${maven-resources-plugin.version}</version>
+                    <configuration>
+                        <encoding>${project.build.encoding}</encoding>
+                        <overwrite>true</overwrite>
+                    </configuration>
+                </plugin>
+
+            </plugins>
+        </pluginManagement>
+
+        <resources>
+            <resource>
+                <directory>${project.basedir}/src/main/resources</directory>
+            </resource>
+            <resource>
+                <directory>${project.basedir}/src/main/config/${bank.name}/resources</directory>
+            </resource>
+        </resources>
+    </build>
+-->
+
+</project>
