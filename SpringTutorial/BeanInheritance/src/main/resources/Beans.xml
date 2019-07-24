@@ -34,4 +34,15 @@
         <property name = "message3" value = "Namaste India!"/>
     </bean>
 
+    <bean id = "beanTeamplate2" abstract = "true" class = "com.tutorialspoint.HelloIndia">
+        <property name = "message1" value = "Hello World!"/>
+        <property name = "message2" value = "Hello Second World!"/>
+        <property name = "message3" value = "Namaste India!"/>
+    </bean>
+
+    <bean id = "helloIndia2" parent = "beanTeamplate2">
+        <property name = "message1" value = "Hello India!"/>
+        <property name = "message3" value = "Namaste India!"/>
+    </bean>
+
 </beans>

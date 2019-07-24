@@ -11,7 +11,7 @@
 	
     <parent>
         <groupId>com.tutorial</groupId>
-        <artifactId>SprintParent</artifactId>
+        <artifactId>SpringParent</artifactId>
         <version>1.0</version>
     </parent>
 
