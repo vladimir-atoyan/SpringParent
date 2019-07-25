@@ -1,0 +1,48 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+                  xmlns:context="http://www.springframework.org/schema/context"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+    <context:component-scan base-package="com.tutorialspoint"/>
+
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/jsp/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+    <!-- connection datasource configuration -->
+    <bean id="stDataSource" class="org.apache.commons.dbcp.BasicDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/fromdev_ibt_doocat_session?useUnicode=yes&amp;characterEncoding=UTF-8"/>
+        <property name="username" value="mcroot"/>
+        <property name="password" value="mcroot"/>
+        <property name="maxActive" value="500"/>
+        <property name="maxWait" value="10000"/>
+        <property name="validationQuery" value="select 1" />
+    </bean>
+
+    <bean id="liquibaseSession" class="liquibase.integration.spring.SpringLiquibase">
+        <property name="dataSource" ref="stDataSource" />
+        <property name="changeLog" value="classpath:db/mysql/liquibase/session-dbChangeLog.xml" />
+        <!--<property name="contexts" value="test" />-->
+    </bean>
+
+<!--
+<property name="url" value="jdbc:mysql://localhost:3306/doocat_session?useUnicode=yes&amp;characterEncoding=UTF-8"/>
+
+<property name="changeLog" value="db/mysql/liquibase/session-dbChangeLog.xml" />
+<property name="url" value="jdbc:mysql://localhost:3306/my_ibt_doocat_session?useUnicode=yes&amp;characterEncoding=UTF-8"/>
+<property name="url" value="jdbc:mysql://localhost:3306/fromdev_cbt_doocat_session?useUnicode=yes&amp;characterEncoding=UTF-8"/>
+
+    st.db.driver=com.mysql.jdbc.Driver
+    st.db.url=jdbc:mysql://localhost:3306/fromdev_cbt_doocat_session?useUnicode=yes&characterEncoding=UTF-8
+    st.db.username=mcroot
+    st.db.password=mcroot
+    st.db.max.active=500
+-->
+
+
+</beans>

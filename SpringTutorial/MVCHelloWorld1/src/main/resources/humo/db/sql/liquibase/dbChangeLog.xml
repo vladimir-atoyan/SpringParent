@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  The liquibase database change log file.
+
+  author Doocat Team (doocatteam@energizeglobal.com)
+  author Gennady Abakyan (gennadya@energizeglobal.com)
+-->
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+    <changeSet id="initial" author="Doocat Team (doocatteam@energizeglobal.com)">
+        <sqlFile dbms="mysql"
+                 encoding="UTF-8"
+                 path="db/sql/doocat_session-2015-05-05.sql"
+                 splitStatements="true"
+                 stripComments="false"/>
+    </changeSet>
+    <changeSet id="all-updates" author="Doocat Team (doocatteam@energizeglobal.com)">
+    </changeSet>
+    <changeSet id="update-2017-05-08" author="Doocat Team (doocatteam@energizeglobal.com)">
+        <sqlFile dbms="mysql"
+                 encoding="UTF-8"
+                 path="db/sql/update-2017-05-08.sql"
+                 splitStatements="true"
+                 stripComments="false"/>
+    </changeSet>
+    <changeSet id="update-2017-06-19" author="Doocat Team (doocatteam@energizeglobal.com)">
+        <sqlFile dbms="mysql"
+                 encoding="UTF-8"
+                 path="db/sql/update-2017-06-19.sql"
+                 splitStatements="true"
+                 stripComments="false"/>
+    </changeSet>
+    <changeSet id="update-2017-06-20" author="Doocat Team (doocatteam@energizeglobal.com)">
+        <sqlFile dbms="mysql"
+                 encoding="UTF-8"
+                 path="db/sql/update-2017-06-20.sql"
+                 splitStatements="true"
+                 stripComments="false"/>
+    </changeSet>
+    <!--<changeSet id="update-2015-04-27" author="Doocat Team (doocatteam@energizeglobal.com)">-->
+    <!--<sqlFile dbms="mysql"-->
+    <!--encoding="UTF-8"-->
+    <!--path="db/sql/update-2015-04-27.sql"-->
+    <!--splitStatements="true"-->
+    <!--stripComments="false"/>-->
+    <!--</changeSet>-->
+</databaseChangeLog>
