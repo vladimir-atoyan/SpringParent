@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  The liquibase session database change log file. -->
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+
+    <changeSet id="initial" author="Doocat Team (doocatteam@energizeglobal.com)" logicalFilePath="db/sql/liquibase/dbChangeLog.xml">
+        <sqlFile dbms="mysql" encoding="UTF-8" path="db/mysql/liquibase/update/doocat_session-2015-05-05.sql" />
+    </changeSet>
+
+    <changeSet id="all-updates" author="Doocat Team (doocatteam@energizeglobal.com)" logicalFilePath="db/sql/liquibase/dbChangeLog.xml">
+    </changeSet>
+
+    <changeSet id="update-2017-05-08" author="Doocat Team (doocatteam@energizeglobal.com)" logicalFilePath="db/sql/liquibase/dbChangeLog.xml">
+        <sqlFile dbms="mysql" encoding="UTF-8" path="db/mysql/liquibase/update/update-2017-05-08.sql" />
+    </changeSet>
+
+    <changeSet id="update-2017-06-19" author="Doocat Team (doocatteam@energizeglobal.com)" logicalFilePath="db/sql/liquibase/dbChangeLog.xml">
+        <sqlFile dbms="mysql" encoding="UTF-8" path="db/mysql/liquibase/update/update-2017-06-19.sql" />
+    </changeSet>
+
+    <changeSet id="update-2017-06-20" author="Doocat Team (doocatteam@energizeglobal.com)" logicalFilePath="db/sql/liquibase/dbChangeLog.xml">
+        <sqlFile dbms="mysql" encoding="UTF-8" path="db/mysql/liquibase/update/update-2017-06-20.sql" />
+    </changeSet>
+
+    <!--<changeSet id="update-2019-07-24" author="Vladimir Atoyan" logicalFilePath="db-changeLog.xml">
+        <sqlFile dbms="mysql" encoding="UTF-8" path="db/mysql/liquibase/update/update-2019-07-24.sql" />
+        <comment>Common session DB schema for ibt, cbt and humo!</comment>
+    </changeSet>-->
+
+</databaseChangeLog>

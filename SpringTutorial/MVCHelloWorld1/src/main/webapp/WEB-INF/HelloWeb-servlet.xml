@@ -8,6 +8,12 @@
 
     <context:component-scan base-package="com.tutorialspoint"/>
 
+    <bean id="stDBConfig" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="location" value="classpath:session-manager-db-config.properties"/>
+        <property name="placeholderPrefix" value="$token{" />
+        <property name="placeholderSuffix" value="}" />
+    </bean>
+
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/jsp/"/>
         <property name="suffix" value=".jsp"/>
@@ -16,7 +22,7 @@
     <!-- connection datasource configuration -->
     <bean id="stDataSource" class="org.apache.commons.dbcp.BasicDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-        <property name="url" value="jdbc:mysql://localhost:3306/fromdev_ibt_doocat_session?useUnicode=yes&amp;characterEncoding=UTF-8"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/fromdev_humo_doocat_session?useUnicode=yes&amp;characterEncoding=UTF-8"/>
         <property name="username" value="mcroot"/>
         <property name="password" value="mcroot"/>
         <property name="maxActive" value="500"/>
@@ -27,10 +33,12 @@
     <bean id="liquibaseSession" class="liquibase.integration.spring.SpringLiquibase">
         <property name="dataSource" ref="stDataSource" />
         <property name="changeLog" value="classpath:db/mysql/liquibase/session-dbChangeLog.xml" />
-        <!--<property name="contexts" value="test" />-->
+        <property name="contexts" value="$token{bank.name}" />
     </bean>
 
+
 <!--
+<property name="changeLog" value="classpath:db/mysql/liquibase/ibt-db-changeLog.xml" />
 <property name="url" value="jdbc:mysql://localhost:3306/doocat_session?useUnicode=yes&amp;characterEncoding=UTF-8"/>
 
 <property name="changeLog" value="db/mysql/liquibase/session-dbChangeLog.xml" />

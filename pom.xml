@@ -14,16 +14,14 @@
     </properties>
 
     <modules>
-        <!--<module>SpringTutorial</module>
+        <!--
+        -->
         <module>HelloJsp</module>
-        <module>SpringTests</module>
--->
         <module>MyBatisFinalExamples</module>
-        <module>Struts2</module>
         <module>MybatisGenerator</module>
+        <module>SpringTests</module>
+        <module>SpringTutorial</module>
+        <module>Struts2</module>
     </modules>
-
-
-
 
 </project>

@@ -24,37 +24,22 @@
         <sqlFile dbms="mysql" encoding="UTF-8" path="db/mysql/liquibase/update/update-2017-06-20.sql" />
     </changeSet>
 
-    <changeSet id="update-2018-05-22" author="Doocat Team (doocatteam@energizeglobal.com)" logicalFilePath="db/sql/liquibase/dbChangeLog.xml"
-               context="ibt,cbt">
+    <changeSet id="update-2018-05-22" author="Doocat Team (doocatteam@energizeglobal.com)" logicalFilePath="db/sql/liquibase/dbChangeLog.xml">
         <sqlFile dbms="mysql" encoding="UTF-8" path="db/mysql/liquibase/update/update-2018-05-22.sql" />
     </changeSet>
 
-    <changeSet id="update-2019-03-18" author="Doocat Team (doocatteam@energizeglobal.com)" logicalFilePath="db/sql/liquibase/dbChangeLog.xml"
-               context="cbt">
-        <sqlFile dbms="mysql" encoding="UTF-8" path="db/mysql/liquibase/update/update-2019-03-18.sql" />
-    </changeSet>
-
-    <changeSet id="update-2019-04-18" author="Doocat Team (doocatteam@energizeglobal.com)" logicalFilePath="db/sql/liquibase/dbChangeLog.xml"
-               context="ibt">
+    <changeSet id="update-2019-04-18" author="Doocat Team (doocatteam@energizeglobal.com)" logicalFilePath="db/sql/liquibase/dbChangeLog.xml">
         <sqlFile dbms="mysql" encoding="UTF-8" path="db/mysql/liquibase/update/update-2019-04-18.sql" />
     </changeSet>
 
-    <!-- Starting from this update the session DB for ibt, cbt, humo and and any new banks will have common schema! -->
-    <!-- So different logic should be handled in client (java) code, not in table structure. -->
-    <!-- The different tables in those DBs are:
-        stoken; -->
-    <!-- COMMON UPDATE BEGIN -->
-
-    <!--<changeSet id="update-2019-07-24_1" author="Vladimir Atoyan" logicalFilePath="db-changeLog.xml" context="cbt">
-        <sqlFile dbms="mysql" encoding="UTF-8" path="db/mysql/liquibase/update/update-2019-07-24_1.sql" />
-        <comment>Make the CBT `stoken`.`user_email` field same as in other configuration</comment>
-    </changeSet>
-
-    <changeSet id="update-2019-07-24_2" author="Vladimir Atoyan" logicalFilePath="db-changeLog.xml">
-        <sqlFile dbms="mysql" encoding="UTF-8" path="db/mysql/liquibase/update/update-2019-07-24_2.sql" />
-        <comment>Add index `stoken`.`user_id` for all configuration</comment>
+    <!--<changeSet id="update-2019-07-24" author="Vladimir Atoyan" logicalFilePath="db-changeLog.xml">
+        <sqlFile dbms="mysql" encoding="UTF-8" path="db/mysql/liquibase/update/update-2019-07-24.sql" />
+        <comment>Common session DB schema for ibt, cbt and humo!</comment>
     </changeSet>-->
 
-    <!-- COMMON UPDATE END -->
+    <!--<changeSet id="update-2019-07-24" author="Vladimir Atoyan5" logicalFilePath="db-changeLog.xml" context="xx,ibt1">
+        <sqlFile dbms="mysql" encoding="UTF-8" path="db/mysql/liquibase/update/update-2019-07-24.sql" />
+        <comment>Common session DB schema for ibt, cbt and humo!</comment>
+    </changeSet>-->
 
 </databaseChangeLog>
